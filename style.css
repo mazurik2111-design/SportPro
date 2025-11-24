@@ -1,0 +1,261 @@
+/* БАЗОВІ СТИЛІ */
+body {
+    margin: 0;
+    padding: 0;
+    background: #0a1220;
+    color: #e5e9f0;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+nav {
+    background: #0f1b33;
+    padding: 20px 0;
+    box-shadow: 0 0 20px rgba(0,0,0,.6);
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.nav-container a {
+    color: #dce6f5;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.nav-container a.active {
+    background: #1e3a66;
+    color: white;
+}
+
+.nav-container a:hover {
+    background: #345586;
+    color: white;
+}
+
+/* HERO (ГОЛОВНА) */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #2f4e7a;
+    color: white;
+    font-weight: bold;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.btn:hover {
+    background: #4d7fc7;
+}
+
+/* FEATURES (ГОЛОВНА) */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.feature {
+    background: #162238;
+    padding: 16px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+    transition: 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 0 35px #355c8b;
+}
+
+.feature img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+/* ABOUT PAGE */
+.about {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+    line-height: 1.7;
+}
+
+.about h1, .about h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-img {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+    object-fit: cover;
+}
+
+/* ВЛАСНИКИ */
+.owners {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0 40px 0;
+}
+
+.owner-card {
+    background: #162238;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: 220px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+
+.owner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px #355c8b;
+}
+
+.owner-card a {
+    color: #4d7fc7;
+    text-decoration: none;
+}
+
+.owner-card a:hover {
+    text-decoration: underline;
+}
+
+/* ПЕРЕВАГИ */
+.about ul {
+    max-width: 700px;
+    margin: auto;
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.about ul li {
+    background: #162238;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* CONTACTS */
+.contacts {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.contact-form, .contact-info {
+    background: #162238;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    background: #0f1b33;
+    color: white;
+    resize: none;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: #2f4e7a;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.contact-form button:hover {
+    background: #4d7fc7;
+}
+.feature img, .about-img {
+    max-height: 300px;
+}
+
+.feature img:hover, .about-img:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0f1b33;
+    color: #dce6f5;
+    margin-top: 40px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .features {
+        grid-template-columns: 1fr;
+    }
+    .owners {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
