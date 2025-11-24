@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товари</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Навігація -->
+<nav>
+    <div class="nav-container">
+        <a href="index.html">Головна</a>
+        <a href="products.html">Товари</a>
+        <a href="prices.html">Ціни</a>
+        <a href="delivery.html">Доставка</a>
+        <a href="about.html">Про нас</a>
+        <a href="contacts.html">Контакти</a>
+    </div>
+</nav>
+
+<div class="container">
+    <h1>Наші товари</h1>
+
+    <!-- Фільтри -->
+    <div class="filter-buttons">
+        <button onclick="showCategory('all')">Всі</button>
+        <button onclick="showCategory('yoga')">Йога</button>
+        <button onclick="showCategory('power')">Силові</button>
+        <button onclick="showCategory('cardio')">Кардіо</button>
+    </div>
+
+    <!-- Товари -->
+    <div class="products-grid">
+
+        <!-- Йога -->
+        <div class="product-card" data-cat="yoga">
+            <img src="img/килимок.jpg" alt="Килимок для йоги">
+            <h3>Килимок для йоги</h3>
+            <p>Товщина 10 мм. Знижка 5% при купівлі 2 шт.</p>
+            <a href="delivery.html" class="buy-btn">Купити</a>
+        </div>
+        <div class="product-card" data-cat="yoga">
+            <img src="img/блок длч.jpg" alt="Блок для йоги">
+            <h3>Блок для йоги</h3>
+            <p>Пінопластовий. Знижка 10% при купівлі 3 шт.</p>
+            <a href="delivery.html" class="buy-btn">Купити</a>
+        </div>
+        <div class="product-card" data-cat="yoga">
+            <img src="img/ремінь для йоги.jpg" alt="Ремінь для йоги">
+            <h3>Ремінь для йоги</h3>
+            <p>Довжина 2 м. Знижка 5% при купівлі 2 шт.</p>
+            <a href="delivery.html" class="buy-btn">Купити</a>
+        </div>
+        <div class="product-card" data-cat="yoga">
+            <img src="img/йога-колесо.jpg" alt="Йога-колесо">
+            <h3>Йога-колесо</h3>
+            <p>Для розтяжки та вправ. Знижка 5% при купівлі 2 шт.</p>
+            <a href="delivery.html" class="buy-btn">Купити</a>
+        </div>
+
+        <!-- Силові -->
+        <div class="product-card" data-cat="power">
+            <img src="img/гантелі.jpg" alt="Гантелі 2x5 кг">
+            <h3>Гантелі 2×5 кг</h3>
+            <p>Гумове покриття. Знижка 10% при купівлі 2 комплектів.</p>
+            <a href="delivery.html" class="buy-btn">Купити</a>
+        </div>
+        <div class="product-card" data-cat="power">
+            <img src="img/кетлбел.jpg" alt="Кетлбел 12 кг">
+            <h3>Кетлбел 12 кг</h3>
+            <p>Професійна гиря. Знижка 15% при купівлі 3 шт.</p>
+            <a href="delivery.html" class="buy-btn">Купити</a>
+        </div>
+        <div class="product-card" data-cat="power">
+            <img src="img/штанга.jpg" alt="Штанга 20 кг">
+            <h3>Штанга 20 кг</h3>
+            <p>Металева. Знижка 5% при купівлі 2 шт.</p>
+            <a href="delivery.html" class="buy-btn">Купити</a>
+        </div>
+        <div class="product-card" data-cat="power">
+            <img src="img/еспандер.jpg" alt="Еспандер силовий">
+            <h3>Еспандер силовий</h3>
+            <p>Різна жорсткість. Знижка 10% при купівлі 3 шт.</p>
+            <a href="delivery.html" class="buy-btn">Купити</a>
+        </div>
+
+        <!-- Кардіо -->
+        <div class="product-card" data-cat="cardio">
+            <img src="img/скакалка.jpg" alt="Скакалка сталева">
+            <h3>Скакалка сталева</h3>
+            <p>Швидкі оберти. Знижка 5% при купівлі 2 шт.</p>
+            <a href="delivery.html" class="buy-btn">Купити</a>
+        </div>
+        <div class="product-card" data-cat="cardio">
+            <img src="img/бігова доріжка.jpg" alt="Бігова доріжка">
+            <h3>Бігова доріжка</h3>
+            <p>Складна, електронна. Знижка 10% при купівлі 2 шт.</p>
+            <a href="delivery.html" class="buy-btn">Купити</a>
+        </div>
+        <div class="product-card" data-cat="cardio">
+            <img src="img/велотренажер.
+
+
+jpg" alt="Велотренажер">
+            <h3>Велотренажер</h3>
+            <p>Магнітний опір. Знижка 10% при купівлі 2 шт.</p>
+            <a href="delivery.html" class="buy-btn">Купити</a>
+        </div>
+        <div class="product-card" data-cat="cardio">
+            <img src="img/платформи для стрибків.jpg" alt="Платформа для стрибків">
+            <h3>Платформа для стрибків</h3>
+            <p>Регульована висота. Знижка 5% при купівлі 2 шт.</p>
+            <a href="delivery.html" class="buy-btn">Купити</a>
+        </div>
+
+    </div>
+</div>
+
+<script>
+function showCategory(cat) {
+    document.querySelectorAll('.product-card').forEach(card => {
+        card.style.display = (cat === 'all' || card.dataset.cat === cat) ? 'block' : 'none';
+    });
+}
+</script>
+
+</body>
+</html>
